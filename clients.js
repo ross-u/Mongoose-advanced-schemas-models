@@ -25,7 +25,7 @@ mongoose.connect(`mongodb://localhost/${dbName}`)
 
 // INSERTING DOCUMENTS - `Model.create`   // https://mongoosejs.com/docs/api.html#model_Model.create
 let client1 = {
-  name: "Lidia Campos",
+  name: "Infamous Bob",
   age: 60,
   accountActive: true,
   balance: 31218.56,
