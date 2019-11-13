@@ -2,10 +2,11 @@ const mongoose = require('mongoose');
 const data = require('./data.js');
 const dbName = 'iron-bank';
 
+// CLIENT MODEL
 const Client = require('./models/ClientModel.js');
 
 
-// CREATE AN INSTANCE OF CONNECTION TO DATABASE - `example-mongoose` 
+// CREATE A DATABASE CONNECTION INSTANCE - TO DB `example-mongoose` 
 mongoose.connect(`mongodb://localhost/${dbName}`)
   .then(() => console.log(`Connected to Mongo Database -> ${dbName}`))
   .catch((err) => console.error(`Error connecting to Mongo Database - ${dbName}`, err));
