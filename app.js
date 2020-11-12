@@ -1,19 +1,19 @@
 const mongoose = require("mongoose");
 const data = require("./data.js");
-const dbName = "iron-bank";
+const DB_NAME = "iron-bank";
 
 // CLIENT MODEL
 const Client = require("./models/ClientModel.js");
 
 // CREATE A DATABASE CONNECTION INSTANCE - TO DB `example-mongoose`
 mongoose
-  .connect(`mongodb://localhost/${dbName}`, {
+  .connect(`mongodb://localhost/${DB_NAME}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log(`Connected to Mongo Database -> ${dbName}`))
+  .then(() => console.log(`Connected to Mongo Database -> ${DB_NAME}`))
   .catch((err) =>
-    console.error(`Error connecting to Mongo Database - ${dbName}`, err)
+    console.error(`Error connecting to Mongo Database - ${DB_NAME}`, err)
   );
 
 // INSERTING DOCUMENTS - `Model.create`   // https://mongoosejs.com/docs/api.html#model_Model.create
